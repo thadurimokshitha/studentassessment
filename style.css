@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+
+/* Header */
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+    font-size: 17px;
+}
+
+
+/* Form Section */
+
+.form-section {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 15px;
+    align-items: end;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 7px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input,
+select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #667eea;
+}
+
+button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #5568d8;
+}
+
+
+/* Statistics */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.stat-card h3 {
+    font-size: 30px;
+    color: #667eea;
+}
+
+.stat-card p {
+    color: #777;
+    margin-top: 5px;
+}
+
+
+/* Deadline Section */
+
+.deadlines {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+/* Deadline Card */
+
+.deadline-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid #eee;
+    padding: 18px;
+    border-radius: 10px;
+
+    margin-bottom: 12px;
+
+    transition: 0.2s;
+}
+
+.deadline-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.deadline-info h3 {
+    margin-bottom: 7px;
+}
+
+.deadline-info p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* Type Badge */
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 8px;
+    background: #e8ecff;
+    color: #667eea;
+}
+
+
+/* Status */
+
+.status {
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.upcoming {
+    color: #28a745;
+}
+
+.overdue {
+    color: #dc3545;
+}
+
+
+/* Delete Button */
+
+.delete-btn {
+    background: #ff4d4d;
+    padding: 8px 12px;
+}
+
+.delete-btn:hover {
+    background: #d93636;
+}
+
+
+/* Empty message */
+
+.empty {
+    text-align: center;
+    color: #888;
+    padding: 30px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .deadline-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+}

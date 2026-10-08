@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Deadline Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>🎓 Deadline Tracker</h1>
+            <p>Never miss an important college deadline again.</p>
+        </header>
+
+        <!-- Add Deadline Section -->
+        <section class="form-section">
+
+            <h2>Add New Deadline</h2>
+
+            <form id="deadlineForm">
+
+                <div class="input-group">
+                    <label for="task">Task / Subject</label>
+                    <input 
+                        type="text" 
+                        id="task" 
+                        placeholder="Example: DBMS Assignment"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="date">Due Date</label>
+                    <input 
+                        type="date" 
+                        id="date"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="type">Type</label>
+
+                    <select id="type">
+                        <option value="Assignment">Assignment</option>
+                        <option value="Exam">Exam</option>
+                        <option value="Project">Project</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <button type="submit">
+                    + Add Deadline
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <h3 id="totalCount">0</h3>
+                <p>Total</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="upcomingCount">0</h3>
+                <p>Upcoming</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="overdueCount">0</h3>
+                <p>Overdue</p>
+            </div>
+
+        </section>
+
+
+        <!-- Deadline List -->
+        <section class="deadlines">
+
+            <div class="section-heading">
+                <h2>My Deadlines</h2>
+
+                <select id="filter">
+                    <option value="All">All</option>
+                    <option value="Assignment">Assignments</option>
+                    <option value="Exam">Exams</option>
+                    <option value="Project">Projects</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div id="deadlineList">
+
+                <!-- Deadlines will appear here -->
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
